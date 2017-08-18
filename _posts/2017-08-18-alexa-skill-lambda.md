@@ -24,7 +24,8 @@ We need to require 'alexa-sdk' and 'facts'. You can also add your app id. Next w
 
 Most important part of this index,js is handlers, where we write code to handle different intents. 
 
-<code>var handlers = {
+<code>
+var handlers = {
     'LaunchRequest': function () {
         this.emit('GetFact');
     },
@@ -47,7 +48,6 @@ Most important part of this index,js is handlers, where we write code to handle 
         this.emit(':tellWithCard', speechOutput, this.t("SKILL_NAME"), randomFact)
     },
     'GetNewYearFactIntent': function () {
-        //TODO your code here
 	if (this.event.request.intent.slots && this.event.request.intent.slots.FACT_YEAR && this.event.request.intent.slots.FACT_YEAR.value) {
        	    console.log("Found " + this.event.request.intent.slots.FACT_YEAR.value);
 	    var year = this.event.request.intent.slots.FACT_YEAR.value;
