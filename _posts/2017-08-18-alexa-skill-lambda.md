@@ -16,13 +16,9 @@ mkdir simple_alexa_skill
 Now inside simple_alexa_skill we will create a src directory where we will keep our index.js and facts.js files.
 
 index.js is where we handle user request and alexa response. In our facts.js we will keep a simple database of AI facts that we want to tell when a user asks for.
-Below is an example of facts array in facts.js file :
+Below is an example of facts array in <ul><a href="https://github.com/hbahuguna/AlexaAIHistorySkill/blob/master/src/facts.js">facts.js</a></ul> file.
 
-<ul><a href="https://github.com/hbahuguna/AlexaAIHistorySkill/blob/master/src/facts.js">facts.js</a></ul>
-
-Now we will take a look at index.js where the core logic resides. Open index.js and copy the following code :
-
-https://github.com/hbahuguna/AlexaAIHistorySkill/blob/master/src/index.js
+Now we will take a look at <ul><a href="https://github.com/hbahuguna/AlexaAIHistorySkill/blob/master/src/index.js">index.js</a></ul> where the core logic resides. Open index.js and copy the code from the link.
 
 We need to require 'alexa-sdk' and 'facts'. You can also add your app id. Next we create an array containing some utterances for Alexa to respond with for your skill. 
 
