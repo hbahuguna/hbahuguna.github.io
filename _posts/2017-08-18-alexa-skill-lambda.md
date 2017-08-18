@@ -5,7 +5,7 @@ date: 2017-08-18
 ---
 To create an Alexa skill, you will need an Amazon Developer Account and an AWS account. AWS lambda supports a veriety of languages and there are libraries available for those languages, for the purposes of this post, we will be using Node.js as it has the good lambda support compared to other languages.
 
-We will need Alexa SDK for<a href="https://nodejs.org/en/">Node.js</a> in order to start creating a skill. On your terminal run the following command to install alexa-sdk:
+We will need Alexa SDK for <a href="https://nodejs.org/en/">Node.js</a> in order to start creating a skill. On your terminal run the following command to install alexa-sdk:
 
 <code>npm install alexa-sdk --save</code>
 
