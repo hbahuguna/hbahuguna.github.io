@@ -7,11 +7,11 @@ To create an Alexa skill, you will need an Amazon Developer Account and an AWS a
 
 We will need Alexa SDK for Node.js in order to start creating a skill. On your terminal run the following command to install alexa-sdk:
 
-npm install alexa-sdk --save
+<code>npm install alexa-sdk --save</code>
 
 We will create a home directory for our Alexa skill. Let us call our home directory simple_alexa_skill:
 
-mkdir simple_alexa_skill
+<code>mkdir simple_alexa_skill</code>
 
 Now inside simple_alexa_skill we will create a src directory where we will keep our index.js and facts.js files.
 
