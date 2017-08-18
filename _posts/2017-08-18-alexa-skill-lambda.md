@@ -22,7 +22,7 @@ Now we will take a look at <a href="https://github.com/hbahuguna/AlexaAIHistoryS
 
 We need to require 'alexa-sdk' and 'facts'. You can also add your app id. Next we create an array containing some utterances for Alexa to respond with for your skill. 
 
-Most important part of this index,js is handlers, where we write code to handle different intents. 
+Most important part of index.js is handlers, where we write code to handle different intents. 
 <pre class="highlight"><code>
 var handlers = {
     'LaunchRequest': function () {
