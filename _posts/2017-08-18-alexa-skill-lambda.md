@@ -23,7 +23,7 @@ Now we will take a look at <a href="https://github.com/hbahuguna/AlexaAIHistoryS
 We need to require 'alexa-sdk' and 'facts'. You can also add your app id. Next we create an array containing some utterances for Alexa to respond with for your skill. 
 
 Most important part of this index,js is handlers, where we write code to handle different intents. 
-
+<code>
 var handlers = {
     'LaunchRequest': function () {
         this.emit('GetFact');
@@ -31,7 +31,6 @@ var handlers = {
     'GetNewFactIntent': function () {
         var factArr = this.t('FACTS');
         var randomFact = randomPhrase(factArr);
-
         var speechOutput = randomPhrase(this.t("GET_FACT_MESSAGE")) + randomFact;
         this.emit(':askWithCard', speechOutput, this.t("HELP_REPROMPT"), "Here's an Interesting AI Fact:", randomFact)
     },
@@ -63,7 +62,7 @@ var handlers = {
         this.emit(':tell', this.t("STOP_MESSAGE"));
     }
 };
-
+</code>
 When a skill is first invoked, we need to handle the <code>LaunchRequest</code> intent. In our implementation we are simply calling the handler for <code>GetFact</code>, which will get us a random fact from facts.js. We should always add handlers for <code>AMAZON.HelpIntent</code>, <code>AMAZON.CancelIntent</code> and <code>AMAZON.StopIntent</code>. These intents are invoked when a user wants help for your skill, cancel the current operation and stop the skill respectively. Now, we also have some handlers for custom intents such as <code>GetNewFactIntent</code> and <code>GetNewYearFactIntent</code>. <code>GetNewFactIntent</code> is a handler for a case when user wants to keep the conversation open, so we use <code>:askWithCard</code> and <code>HELP_REPROMPT</code>. <code>GetNewYearFactIntent</code> is handler for an event when user asks a fact for a certain year. This is acheived using a slot. A slot is a variable which we need to define in the model for our Alexa skill in Amazon Developer Console. 
 
 So it seems like we need to define a model for our skill. We will need to login to <a href="https://developer.amazon.com">Amazon Developer Console</a> and then navigate to Alexa tab and Alexa Skills Kit. Then we can Add a new skill. You will need to choose an appropriate name and invocation name. Keep everything else default. Click Save and click Next to navigate to Interaction Model step. In our example we will not use Skill Builder. Instead, we will just paste code from <a href="https://github.com/hbahuguna/AlexaAIHistorySkill/blob/master/speechAssets/IntentSchema.json">Intent Schema</a> in the Intent Schema text box. You will notice that we used a <code>slots</code> array for <code>GetNewYearFact</code> intent. So we will also need to add a slot named <code>FACT_YEAR</code> which has a built in type <AMAZON.FOUR_DIGIT_NUMBER></code>. You can add the following values for the <code>FACT_YEAR</code> slot:
