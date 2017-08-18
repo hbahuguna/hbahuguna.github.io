@@ -18,7 +18,7 @@ Now inside simple_alexa_skill we will create a src directory where we will keep 
 index.js is where we handle user request and alexa response. In our facts.js we will keep a simple database of AI facts that we want to tell when a user asks for.
 Below is an example of facts array in facts.js file :
 
-https://github.com/hbahuguna/AlexaAIHistorySkill/blob/master/src/facts.js
+<ul><a href="https://github.com/hbahuguna/AlexaAIHistorySkill/blob/master/src/facts.js">facts.js<\a></ul>
 
 Now we will take a look at index.js where the core logic resides. Open index.js and copy the following code :
 
