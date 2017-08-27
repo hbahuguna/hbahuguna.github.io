@@ -8,7 +8,7 @@ date: 2017-08-27
 
 Our Rectangle class is as follows :
 
-<code>
+<pre class="highlight"><code>
 public static class Rectangle {
 	public static final NO_RECTANGLE = new Rectangle();
 	private int leftX;
@@ -35,7 +35,7 @@ public static class Rectangle {
 		return height;
 	}
 }
-</code>
+</code></pre>
 
 The output should also be a Rectangle.
 
@@ -51,7 +51,7 @@ To find an intersection on X axis, we need to consider the following cases:
 
 First we need to find out what is the condition for Line 1 and Line 2 to intersect. If max of left ends of Line 1 and 2 is less than the min of right ends of Line 1 and 2, then we see that there is an intersection.
 
-<code>
+<pre class="highlight"><code>
 public static class XIntersect {
 	public static final NO_INTERSECTION = new XIntersect();
 	private int leftX;
@@ -68,9 +68,9 @@ public static class XIntersect {
 		return width;
 	}
 }
-</code>
+</code></pre>
 
-<code>
+<pre class="highlight"><code>
 public static XIntersect findXIntersection(int leftX1, int width1, int leftX2, int width2) {
 	int rightX1 = leftX1 + width1;
 	int rightX2 = leftX2 + width2;
@@ -82,13 +82,13 @@ public static XIntersect findXIntersection(int leftX1, int width1, int leftX2, i
 		return XIntersect.NO_INTERSECTION;
 	}
 }
-</code>
+</code></pre>
 
 We created an XIntersect class that creates an object which represents an intersection. In our findXIntersection method we return an XIntersect object if max of left ends is greater than min of right ends of two lines.
 
 We can use the similar approach to find YIntersection, so we will rather create a common Intersection object that can be used by both X and Y intersections.
 
-<code>
+<pre class="highlight"><code>
 private static class Intersect {
 	public static final NO_INTERSECTION = new Intersect();
 	private int start;
@@ -105,9 +105,9 @@ private static class Intersect {
 		return length;
 	}
 }
-</code>
+</code></pre>
 
-<code>
+<pre class="highlight"><code>
 private static Intersect findIntersection(int start1, int length1, int start2, int length2) {
 	int end1 = start1 + length1;
 	int end2 = start2 + length2;
@@ -119,12 +119,12 @@ private static Intersect findIntersection(int start1, int length1, int start2, i
 		return Intersect.NO_INTERSECTION;
 	}
 }
-</code>
+</code></pre>
 
 We can use findIntersection method to find intersection on both X and Y axis. We can also say that two rectangles intersect when both X and Y lines of rectangles intersect. We can then return a new Rectangle with width and height of Intersection objects we obtained so far.
 
 
-<code>
+<pre class="highlight"><code>
 public static Rectangle findRectangleIntersection(Rectangle rect1, Rectangle rect2) {
 	Intersect xIntersect = findIntersection(rect1.getLeftX(), rect1.getWidth(), rect2.getLeftX(), rect2.getWidth());
 	Intersect yIntersect = findIntersection(rect1.getBottomY(), rect1.getHeigh(), rect2.getBottomY(), rect2.getHeight());
@@ -134,4 +134,4 @@ public static Rectangle findRectangleIntersection(Rectangle rect1, Rectangle rec
 		return new Rectangle.NO_RECTANGLE;
 	}
 }
-</code>
+</code></pre>
