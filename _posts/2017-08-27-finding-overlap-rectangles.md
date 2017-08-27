@@ -10,30 +10,30 @@ Our Rectangle class is as follows :
 
 <pre class="highlight"><code>
 public static class Rectangle {
-	public static final NO_RECTANGLE = new Rectangle();
-	private int leftX;
+    public static final NO_RECTANGLE = new Rectangle();
+    private int leftX;
     private int bottomY;
-   	private int width;
-  	private int height;
+    private int width;
+    private int height;
     public Rectangle() {}
     public Rectangel(int leftX, int bottomY, int width, int height) {
-		this.leftX = leftX;
-		this.bottomY = bottomY;
-		this.width = width;
-		this.height = height;
-  	}
-	public int getLeftX() {
-		return leftX;
-	}
-	public int getBottomY() {
-		return bottomY;
-	}
-	public int getWidth() {
-		return width;
-	}
-	public int getHeight() {
-		return height;
-	}
+	this.leftX = leftX;
+	this.bottomY = bottomY;
+	this.width = width;
+	this.height = height;
+    }
+    public int getLeftX() {
+	return leftX;
+    }
+    public int getBottomY() {
+	return bottomY;
+    }
+    public int getWidth() {
+	return width;
+    }
+    public int getHeight() {
+	return height;
+    }
 }
 </code></pre>
 
@@ -53,34 +53,34 @@ First we need to find out what is the condition for Line 1 and Line 2 to interse
 
 <pre class="highlight"><code>
 public static class XIntersect {
-	public static final NO_INTERSECTION = new XIntersect();
-	private int leftX;
-	private int width;
+    public static final NO_INTERSECTION = new XIntersect();
+    private int leftX;
+    private int width;
     public XIntersect() {}
     public XIntersect(int leftX, int width) {
-		this.leftX = leftX;
-		this.width = width;
+	this.leftX = leftX;
+	this.width = width;
     }
-	public int getLeftX() {
-		return leftX;
-	}
-	public int getWidth() {
-		return width;
-	}
+    public int getLeftX() {
+ 	return leftX;
+    }
+    public int getWidth() {
+	return width;
+    }
 }
 </code></pre>
 
 <pre class="highlight"><code>
 public static XIntersect findXIntersection(int leftX1, int width1, int leftX2, int width2) {
-	int rightX1 = leftX1 + width1;
-	int rightX2 = leftX2 + width2;
-	int maxLeft = Math.max(leftX1, leftX2);
-	int minRight = Math.min(rightX1, rightX2);
-	if(maxLeft < minRight) {
-		return XIntersect(maxLeft,minRigt - maxLeft);
-	} else {
-		return XIntersect.NO_INTERSECTION;
-	}
+    int rightX1 = leftX1 + width1;
+    int rightX2 = leftX2 + width2;
+    int maxLeft = Math.max(leftX1, leftX2);
+    int minRight = Math.min(rightX1, rightX2);
+    if(maxLeft < minRight) {
+	return XIntersect(maxLeft,minRigt - maxLeft);
+    } else {
+	return XIntersect.NO_INTERSECTION;
+    }
 }
 </code></pre>
 
@@ -90,34 +90,34 @@ We can use the similar approach to find YIntersection, so we will rather create 
 
 <pre class="highlight"><code>
 private static class Intersect {
-	public static final NO_INTERSECTION = new Intersect();
-	private int start;
-	private int length;
+    public static final NO_INTERSECTION = new Intersect();
+    private int start;
+    private int length;
     public Intersect() {}
     public XIntersect(int start, int length) {
-		this.start = start;
-		this.length = length;
+	this.start = start;
+	this.length = length;
     }
-	public int getStart() {
-		return start;
-	}
-	public int getLength() {
-		return length;
-	}
+    public int getStart() {
+	return start;
+    }
+    public int getLength() {
+	return length;
+    }
 }
 </code></pre>
 
 <pre class="highlight"><code>
 private static Intersect findIntersection(int start1, int length1, int start2, int length2) {
-	int end1 = start1 + length1;
-	int end2 = start2 + length2;
-	int maxStart = Math.max(start1, start2);
-	int minEnd = Math.min(end1, end2);
-	if(maxLeft < minRight) {
-		return XIntersect(maxStart,minEnd - maxStart);
-	} else {
-		return Intersect.NO_INTERSECTION;
-	}
+    int end1 = start1 + length1;
+    int end2 = start2 + length2;
+    int maxStart = Math.max(start1, start2);
+    int minEnd = Math.min(end1, end2);
+    if(maxLeft < minRight) {
+	return XIntersect(maxStart,minEnd - maxStart);
+    } else {
+	return Intersect.NO_INTERSECTION;
+    }
 }
 </code></pre>
 
@@ -126,12 +126,12 @@ We can use findIntersection method to find intersection on both X and Y axis. We
 
 <pre class="highlight"><code>
 public static Rectangle findRectangleIntersection(Rectangle rect1, Rectangle rect2) {
-	Intersect xIntersect = findIntersection(rect1.getLeftX(), rect1.getWidth(), rect2.getLeftX(), rect2.getWidth());
-	Intersect yIntersect = findIntersection(rect1.getBottomY(), rect1.getHeigh(), rect2.getBottomY(), rect2.getHeight());
-	if(xIntersect.getLength() > 0 && yIntersect.getLength() > 0) {
-		return new Rectangle(xIntersect.getStart(), yIntersect.getStart(), xIntersect.length(), yIntersect.length());
-	} else {
-		return new Rectangle.NO_RECTANGLE;
-	}
+    Intersect xIntersect = findIntersection(rect1.getLeftX(), rect1.getWidth(), rect2.getLeftX(), rect2.getWidth());
+    Intersect yIntersect = findIntersection(rect1.getBottomY(), rect1.getHeigh(), rect2.getBottomY(), rect2.getHeight());
+    if(xIntersect.getLength() > 0 && yIntersect.getLength() > 0) {
+	return new Rectangle(xIntersect.getStart(), yIntersect.getStart(), xIntersect.length(), yIntersect.length());
+    } else {
+	return new Rectangle.NO_RECTANGLE;
+    }
 }
 </code></pre>
