@@ -10,44 +10,36 @@ Our Rectangle class is as follows :
 
 <code>
 public static class Rectangle {
-
 	public static final NO_RECTANGLE = new Rectangle();
-    
 	private int leftX;
     private int bottomY;
-    private int width;
+   	private int width;
   	private int height;
-
     public Rectangle() {}
-
     public Rectangel(int leftX, int bottomY, int width, int height) {
 		this.leftX = leftX;
 		this.bottomY = bottomY;
 		this.width = width;
 		this.height = height;
   	}
-
 	public int getLeftX() {
 		return leftX;
 	}
-
 	public int getBottomY() {
 		return bottomY;
 	}
-
 	public int getWidth() {
 		return width;
 	}
-
 	public int getHeight() {
 		return height;
 	}
 }
 </code>
 
-The output rectangle should also be a Rectangle.
+The output should also be a Rectangle.
 
-<b>Solution</b>
+<b>Solution:</b>
 
 Let us begin with finding an intersection for two lines on X axis. Then we will extend this to find out an intersection of two lines on Y axis. If there is an intersection on both axis then we can return a new rectangle created by intersection, otherwise we will return NO_RECTANGLE.
 
@@ -61,28 +53,24 @@ First we need to find out what is the condition for Line 1 and Line 2 to interse
 
 <code>
 public static class XIntersect {
-
 	public static final NO_INTERSECTION = new XIntersect();
-
 	private int leftX;
 	private int width;
-
     public XIntersect() {}
-
     public XIntersect(int leftX, int width) {
 		this.leftX = leftX;
 		this.width = width;
     }
-	
 	public int getLeftX() {
 		return leftX;
 	}
-	
 	public int getWidth() {
 		return width;
 	}
 }
+</code>
 
+<code>
 public static XIntersect findXIntersection(int leftX1, int width1, int leftX2, int width2) {
 	int rightX1 = leftX1 + width1;
 	int rightX2 = leftX2 + width2;
@@ -102,28 +90,24 @@ We can use the similar approach to find YIntersection, so we will rather create 
 
 <code>
 private static class Intersect {
-
 	public static final NO_INTERSECTION = new Intersect();
-
 	private int start;
 	private int length;
-
     public Intersect() {}
-
     public XIntersect(int start, int length) {
 		this.start = start;
 		this.length = length;
     }
-	
 	public int getStart() {
 		return start;
 	}
-	
 	public int getLength() {
 		return length;
 	}
 }
+</code>
 
+<code>
 private static Intersect findIntersection(int start1, int length1, int start2, int length2) {
 	int end1 = start1 + length1;
 	int end2 = start2 + length2;
