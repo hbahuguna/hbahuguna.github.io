@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rotation in a Sorted Array"
-date: 2017-08-17
+date: 2017-08-18
 ---
 
 <b>Write a funtion to find the rotation point in a sorted array</b>

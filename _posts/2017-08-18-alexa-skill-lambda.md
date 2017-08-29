@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Simple Alexa Skill Using AWS Lambda"
-date: 2017-08-18
+date: 2017-08-29
 ---
 To create an Alexa skill, we will need an Amazon Developer Account and an AWS account. AWS lambda supports a veriety of languages and there are libraries available for those languages, for the purposes of this post, we will be using Node.js as it has the good lambda support compared to other languages.
 
