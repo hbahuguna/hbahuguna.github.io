@@ -14,7 +14,7 @@ We know that array is sorted, and the best way to search in a sorted array is bi
  
 <pre class="highlight"><code>
 public static int findRotation(int[] sortedRotated) {
-	int ceilingIndex = 0;
+    int ceilingIndex = 0;
     int floorIndex = sortedRotated.length;
     while(floorIndex < ceilingIndex){
  		int mid = (ceilingIndex + floorIndex) / 2;
