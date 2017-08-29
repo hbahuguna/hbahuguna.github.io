@@ -10,7 +10,7 @@ We have a sorted array of integers, except that it is rotated somewhere in the a
 
 <b>Solution:</b>
 
-We know that array is sorted, and the best way to search in a sorted array is binary search. To find the rotation point, lets take a look at example array. Lets say index 0 is the floor index and index 6 (length of array) is ceiling index. Middle point is index 3, which has a value 14. Rotation occurs to the right of middle point, we can see that the values were increasing until we hit the rotation index, but just at the rotation index value becomes less that the previous value, so we can say that rotation point is the index where the value becomes less than its previous value. So if the value at the floor index of a sorted array is less than the value at ceiling index, then the rotation index should be to the left of ceiling index.
+We know that array is sorted, and the best way to search in a sorted array is binary search. To find the rotation point, lets take a look at example array. Lets say index 0 is the floor index and index 6 (length of array) is ceiling index. Middle point is index 3, which has a value 14. Rotation occurs to the right of middle point, we can see that the values were increasing until we hit the rotation index, but just at the rotation index value becomes less than the previous value, so we can say that rotation point is the index where the value becomes less than its previous value. So if the value at the floor index of a sorted array is less than the value at ceiling index, then the rotation index should be to the left of ceiling index.
  
 <pre class="highlight"><code>
 public static int findRotation(int[] sortedRotated) {
