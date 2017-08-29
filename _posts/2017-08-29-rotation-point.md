@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Finding Rotation Point in a Sorted Array"
+title: "Rotation in a Sorted Array"
 date: 2017-08-29
 ---
 
