@@ -25,7 +25,7 @@ public class Component {
     protected </code></pre>&lt;<pre class="highlight"><code>T extends Component</code></pre>&gt;<pre class="highlight"><code> T findComponent(By by, Class</code></pre>&lt;T&gt;<pre class="highlight"><code> componentClass) {
         T component = null;
         try {
-            Constructor<pre class="highlight"><code>&lt;T&gt;</code></pre> constructor = componentClass.getConstructor(new Class[] { WebElement.class, WebDriver.class });
+            Constructor T constructor = componentClass.getConstructor(new Class[] { WebElement.class, WebDriver.class });
             component = constructor.newInstance(findElement(by), driver);
         } catch (NoSuchMethodException | SecurityException | InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
             e.printStackTrace();
