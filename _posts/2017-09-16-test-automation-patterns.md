@@ -33,7 +33,10 @@ public class Component {
         }
         return component;
     }	
-} 
+}
+</code></pre>
+
+<pre class="highlight"><code> 
 // Google search page content component inheriting base component
 public class ContentComponent extends Component {
     private final WebElement image;
@@ -51,6 +54,9 @@ public class ContentComponent extends Component {
         return image;
     }
 }
+</code></pre>
+
+<pre class="highlight"><code>
 // Google search page footer component 
 public class FooterComponent extends Component {
     private final WebElement advertising;
@@ -85,6 +91,9 @@ public class Page extends Component {
         return body;
     }
 }
+</code></pre>
+
+<pre class="highlight"><code>
 //GooglePage inherits Page
 public class GooglePage extends Page {
     private ContentComponent content;
@@ -95,7 +104,8 @@ public class GooglePage extends Page {
     public ContentComponent content() {
         return content;
     }
-}</code></pre>
+}
+</code></pre>
 
 We are now ready to use the GooglePage Object created above in our test. Below is an example of a test that uses the objects using Page and Component objects :
 
