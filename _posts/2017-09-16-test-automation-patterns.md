@@ -61,7 +61,8 @@ public class FooterComponent extends Component {
     public WebElement advertising() {
         return advertising;
     }
-}</code></pre> 
+}
+</code></pre>
 
 
 <b>Page Object</b>
