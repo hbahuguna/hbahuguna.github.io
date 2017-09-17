@@ -22,10 +22,10 @@ public class Component {
 	protected WebElement findElement(By by) {
 		return element.findElement(by);
 	}
-    protected &lt;T extends Component&gt; T findComponent(By by, Class<T> componentClass) {
+    protected &lt;T extends Component&gt; T findComponent(By by, Class&lt;T&gt; componentClass) {
         T component = null;
         try {
-            Constructor<T> constructor = componentClass.getConstructor(new Class[] { WebElement.class, WebDriver.class });
+            Constructor&lt;T&gt; constructor = componentClass.getConstructor(new Class[] { WebElement.class, WebDriver.class });
             component = constructor.newInstance(findElement(by), driver);
         } catch (NoSuchMethodException | SecurityException | InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
             e.printStackTrace();
