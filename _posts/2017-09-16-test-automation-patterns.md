@@ -22,7 +22,7 @@ public class Component {
 	protected WebElement findElement(By by) {
 		return element.findElement(by);
 	}
-    protected </code></pre>&lt;<pre class="highlight"><code>T extends Component</code></pre>&gt;<pre class="highlight"><code> T findComponent(By by, Class</code></pre>&lt;T&gt;<pre class="highlight"><code> componentClass) {
+    protected T extends Component T findComponent(By by, Class T componentClass) {
         T component = null;
         try {
             Constructor T constructor = componentClass.getConstructor(new Class[] { WebElement.class, WebDriver.class });
