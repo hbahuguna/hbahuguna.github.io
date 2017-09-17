@@ -11,8 +11,7 @@ When designing an automation framework we often encounter problems that require 
 
 Modern web design enables web pages to be comprised of smaller components that can be used across the templates. A component itself can contain other components and can be contained by another component. We can also leverage a component object in automation framework which can then be inherited by the actual representation of components in automation. It would be logical to create a component object consisting of driver and the web element that identifies the component on the page. The components or the web elements inside the component should be searched with respect to the web element of the component, not from the top of page. So it makes sense to use findElement method of the web element inside the component rather than using findElement method of the driver. 
 
-<pre class="highlight"><code>
-// Base class for all components
+<pre class="highlight"><code>// Base class for all components
 public class Component {
 	private final WebElement element;
 	private final WebDriver driver;
@@ -62,14 +61,14 @@ public class FooterComponent extends Component {
     public WebElement advertising() {
         return advertising;
     }
-}
-</code></pre> 
+}</code></pre> 
+
+
 <b>Page Object</b>
 
 Since a web page template is comprised of certain components, we can reflect this behaviour in automation by creating page objects for these templates. Now we can declare all the components that are needed on a certain template. This object which defines a particular template can then be used in tests to initiate a test on a particular instance of that template. We can first create a base Page class that can then be inherited by other Page Objects representing templates. This base Page class extends from Component class mentioned above because we would like to reuse findComponent method in our Page. We are assuming that the page has an HTML tag which contains head and body tags. We can treat body tag as a component which will contain other components on a page.
 
-<pre class="highlight"><code>
-//Base class for a Page Object
+<pre class="highlight"><code>//Base class for a Page Object
 public class Page extends Component {
     private final WebElement head;
     private final Component body;
@@ -95,13 +94,11 @@ public class GooglePage extends Page {
     public ContentComponent content() {
         return content;
     }
-}
-</code></pre>
+}</code></pre>
 
 We are now ready to use the GooglePage Object created above in our test. Below is an example of a test that uses the objects using Page and Component objects :
 
-<pre class="highlight"><code>
-public class GooglePageTest {
+<pre class="highlight"><code>public class GooglePageTest {
     @Test
     public void gTest() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -118,7 +115,6 @@ public class GooglePageTest {
             driver.quit();
         }
     }
-}
-</code></pre>
+}</code></pre>
 
-This code can also be found <a href="https://github.com/hbahuguna/simpleGoogleTest">here</a>
+This code can also be found at this <a href="https://github.com/hbahuguna/simpleGoogleTest">location</a>
