@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Webdriver Test Automation Design Patterns"
+title: "Webdriver Design Patterns"
 date: 2017-09-16
 ---
 A test automation framework allows a user to write tests without dealing directly with the underlying test automation tool being used. A user should be able to focus on the business requirements when writing tests. Most of the times a user of a test automation framework is a tester who understands the product well and does not want to go into the technical details of the testing tool being used. So its important to note that test automation framework should provide test writers with an interface thats easy to use and hides the working of underlying testing tool.
