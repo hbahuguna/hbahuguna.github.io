@@ -107,16 +107,102 @@ public class GooglePage extends Page {
 }
 </code></pre>
 
-We are now ready to use the GooglePage Object created above in our test. Below is an example of a test that uses the objects using Page and Component objects :
+<b>WebDriver Factory</b>
 
-<pre class="highlight"><code>public class GooglePageTest {
+Often times we want to run our automation tests on more than one browser. We need to come with a way to select a particular instance of WebDriver based on the browser where we want to run a test. We can pass a browser as an argument to the test using browser parameter on command line or as a VM argument in eclipse e.g. -Dbrowser=chrome.So we first create a Browser enum that represents all the browsers we support in our automation.
+
+<pre class="highlight"><code>
+public enum Browser {
+    chrome,
+    firefox;
+}
+</code></pre> 
+
+Now, we need to create a WebDriverFactory interface with getDriver method which will be implemented by every browser type in Browser enum.
+
+<pre class="highlight"><code>
+public interface WebDriverFactory {
+
+    WebDriver getDriver(Browser browser);
+
+}
+</code></pre> 
+
+So we will first create a class called ChromeFactory that implements WebDriverFactory for chrome. If browser parameter passed to the test matches chrome then we will instantiate and return a ChromeDriver instance.
+
+<pre class="highlight"><code>
+public class ChromeFactory implements WebDriverFactory {
+    private static final String CHROMEDRIVER_PATH = "selenium/chromedriver";
+    @Override
+    public WebDriver getDriver(Browser browser) {
+        if(browser.equals(Browser.chrome)) {
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setBrowserName(BrowserType.CHROME);
+            ChromeDriverService service = new ChromeDriverService.Builder().usingAnyFreePort()
+                .usingDriverExecutable(new File(FileUtils.getUserDirectory(), CHROMEDRIVER_PATH)).build();
+            return new ChromeDriver(service);
+        }
+        return null;
+    }
+}
+</code></pre> 
+
+Now we will create a class called FirefoxFactory that implements WebDriverFactory for firefox. If browser parameter passed to the test matches firefox then we will instantiate and return a FirefoxDriver instance.
+
+<pre class="highlight"><code>
+public class FirefoxFactory implements WebDriverFactory {
+    @Override
+    public WebDriver getDriver(Browser browser) {
+        if(browser.equals(Browser.firefox)) {
+            DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+            return new FirefoxDriver(capabilities);
+        }
+        return null;
+    }
+
+}
+</code></pre> 
+
+Once we have our factories ready we can then use them to initiate the test. For this we will create a class called DriverTest that takes care of instantiating a desired WebDriver instance based on browser parameter passed to the test. We need to create a list of available WebDriverFactories, then we will iterate over this list to find an appropriate driver based on the browser parameter passed to the test. To find the value of browser paramter, we collect all system properties in a hashmap called propertiesMap, and then look for the value of browser parameter in the propertiesMap. 
+
+<pre class="highlight"><code>
+public class DriverTest {
+    private final static Map<String, String> propertiesMap = new HashMap<>();
+    private final WebDriver driver;
+    static{
+        Properties systemProperties = System.getProperties();
+        for (String key : systemProperties.stringPropertyNames()) {
+            propertiesMap.put(key, systemProperties.getProperty(key));
+        }
+    }
+    public DriverTest() {
+        this.driver = getDriverForBrowser(Browser.valueOf(propertiesMap.get("browser")));
+    }
+    public WebDriver driver() {
+        return driver;
+    }
+    private WebDriver getDriverForBrowser(Browser browser) {
+        ImmutableList<WebDriverFactory> webDriverFactories = ImmutableList.<WebDriverFactory> builder()
+                .add(new ChromeFactory())
+                .add(new FirefoxFactory())
+                .build();
+        for (WebDriverFactory driverFactory : webDriverFactories) {
+            WebDriver driver = driverFactory.getDriver(browser);
+            if (driver != null) return driver;
+        }
+        throw new IllegalStateException("WebDriver was not instantiated!");
+    }
+
+}
+</code></pre> 
+
+We are now ready to use the GooglePage Object created above in our test. Below is an example of a test that uses the objects using Page and Component objects :
+<pre class="highlight"><code>
+public class GooglePageTest {
+    DriverTest test = new DriverTest();
     @Test
     public void gTest() {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setBrowserName(BrowserType.CHROME);
-        ChromeDriverService service = new ChromeDriverService.Builder().usingAnyFreePort()
-                .usingDriverExecutable(new File(FileUtils.getUserDirectory(), ".venus/selenium/chrome/2.22/chromedriver")).build();
-        ChromeDriver driver = new ChromeDriver(service);
+        WebDriver driver = test.driver();
         try {
             driver.get("https://www.google.com/");
             GooglePage gPage = new GooglePage(driver);
@@ -126,6 +212,7 @@ We are now ready to use the GooglePage Object created above in our test. Below i
             driver.quit();
         }
     }
-}</code></pre>
+}
+</code></pre>
 
 This code can also be found at this <a href="https://github.com/hbahuguna/simpleGoogleTest">location</a>
