@@ -182,7 +182,7 @@ public class DriverTest {
         return driver;
     }
     private WebDriver getDriverForBrowser(Browser browser) {
-        ImmutableList<WebDriverFactory> webDriverFactories = ImmutableList.<WebDriverFactory> builder()
+        ImmutableList WebDriverFactory webDriverFactories = ImmutableList.WebDriverFactory builder()
                 .add(new ChromeFactory())
                 .add(new FirefoxFactory())
                 .build();
