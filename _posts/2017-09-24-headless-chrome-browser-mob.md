@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Headless Chrome with BrowserMob Proxy"
+title: "Headless Chrome with 
+BrowserMob Proxy"
 date: 2017-09-24
 ---
 
