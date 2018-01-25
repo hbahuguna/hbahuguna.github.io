@@ -18,8 +18,8 @@ After setting NODE_PATH variable node should be able to find chromeless.
 Next thing, you will need to set CHROMELESS_ENDPOINT_API_KEY and CHROMELESS_ENDPOINT_URL environment variables in order to run test on AWS lambda.
 
 <pre class="highlight"><code>
-export CHROMELESS_ENDPOINT_API_KEY=<your_api-key>
-export CHROMELESS_ENDPOINT_URL=<endpoint_url>
+export CHROMELESS_ENDPOINT_API_KEY=your_api-key
+export CHROMELESS_ENDPOINT_URL=endpoint_url
 </code></pre>
 
 Once these variables are set you can run the exapmle test in chromeless repo using the following cmd:
