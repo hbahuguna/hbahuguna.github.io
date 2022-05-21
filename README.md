@@ -51,4 +51,4 @@ Again, please check out the [Jalpc Theme](https://github.com/jarrekk/Jalpc)) - i
 on how to download the base repository and tweak. This is how I got started.
 
 Cheers,
-Johnny
+Himanshu
