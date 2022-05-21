@@ -1,0 +1,73 @@
+# careers section data
+# if you don't have language feature(language.yml is empty), ignore "i18n" items
+- name:
+    detail: Dotdash Meredith
+    i18n: company_a
+  desc:
+    detail: Managing and Leading Front End and Backend Automation teams.
+    i18n: company_a_desc
+  date:
+    detail: April 2020
+    i18n: company_a_date
+  job:
+    detail: Manager SDET
+    i18n: company_a_job
+  icon: fa-plus-square
+  present: true
+
+- name:
+    detail: Udacity
+    i18n: company_a
+  desc:
+    detail: Helping Students with Technical Questions and Project Reviews.
+    i18n: company_a_desc
+  date:
+    detail: October 2019
+    i18n: company_a_date
+  job:
+    detail: Technical Mentor and Project Reviewer / Part Time.
+    i18n: company_a_job
+  icon: fa-plus-square
+  present: true
+
+- name:
+    detail: Dotdash
+    i18n: company_a
+  desc:
+    detail: Designed and Developed Front End and Back End Testing Frameworks and Tools.
+    i18n: company_a_desc
+  date:
+    detail: September 2014
+    i18n: company_a_date
+  job:
+    detail: Senior SDET
+    i18n: company_a_job
+  icon: fa-plus-square
+
+- name:
+    detail: BMC Software
+    i18n: company_b
+  desc:
+    detail: Designed and Developed Automation Frameworks and Tools for Database Automation Software.
+    i18n: company_b_desc
+  date:
+    detail: March 2008
+    i18n: company_b_date
+  job:
+    detail: Staff Software Engineer
+    i18n: company_b_job
+  icon: fa-plus-square
+
+- name:
+    detail: Ness Technologies
+    i18n: company_b
+  desc:
+    detail: Designed and Developed Automation Frameworks for Network Management Software.
+    i18n: company_b_desc
+  date:
+    detail: November 2005
+    i18n: company_b_date
+  job:
+    detail: Software Engineer
+    i18n: company_b_job
+  icon: fa-plus-square
