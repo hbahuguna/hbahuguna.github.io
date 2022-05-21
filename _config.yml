@@ -16,7 +16,7 @@ author:  # change following line to your infomation.
   name: Himanshu Bahuguna  # Be used at blog posts' author.
   first_name: Himanshu  # Be used at index page about me section.
   last_name: Bahuguna  # Be used at index page about me section.
-  avatar: /static/assets/img/landing/avatar.jpeg  # upload your avatar at directory and edit it.
+  avatar: /static/assets/img/landing/himanshu.jpeg  # upload your avatar at directory and edit it.
   github_username: hbahuguna  # Leave blank if you don't have now
   linkedin_id: himanshu-bahuguna-79a988184 # Leave blank if you don't have now
   facebook_username: himanshu.bahuguna  # Leave blank if you don't have now
