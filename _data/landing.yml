@@ -27,8 +27,6 @@
 - id: blog
   i18n: nav.blog
   name: Blog
-  tpl: (['https://medium.com/@hbahuguna'])
-  css: testimonials navy-section
 
 - id: links
   i18n: nav.link
