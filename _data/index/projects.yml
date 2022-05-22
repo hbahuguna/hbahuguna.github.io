@@ -7,7 +7,7 @@
   url: https://github.com/hbahuguna/CryptoStarDapp
   gh_user: hbahuguna
   repo: CryptoStarDapp
-  img: /static/assets/img/landing/himanshu.jpeg
+  img: /static/assets/img/landing/northern.jpeg
   desc: >
     Create an Ethereum ERC-721 token and transfer it to another wallet.
 
@@ -17,7 +17,7 @@
   url: https://github.com/hbahuguna/jacoco-integration-test-code-coverage
   gh_user: hbahuguna
   repo: /jacoco-integration-test-code-coverage
-  img: /static/assets/img/landing/himanshu.jpeg
+  img: /static/assets/img/landing/header_one.jpg
   desc: >
     Code Coverage Report for Java based automation tests.
 
@@ -27,7 +27,7 @@
   url: https://github.com/hbahuguna/skribblle-bot
   gh_user: hbahuguna
   repo: skribblle-bot
-  img: /static/assets/img/landing/himanshu.jpeg
+  img: /static/assets/img/landing/python.png
   desc: >
     Simple bot to fill words used in past Skribble games in the chat window
 
@@ -37,7 +37,7 @@
   url: https://github.com/hbahuguna/AIND-NLP
   gh_user: hbahuguna
   repo: AIND-NLP
-  img: /static/assets/img/landing/himanshu.jpeg
+  img: /static/assets/img/landing/mountains_fb.jpeg
   desc: An end-to-end sentiment classification system from text-based data sets such as Social Media feeds.
 
 - name: Speech Recognition with Neural Networks
@@ -71,7 +71,6 @@
   url: https://github.com/hbahuguna/AlexaAIHistorySkill
   gh_user: hbahuguna
   repo: alexa-history-skill
-  img: /static/assets/img/landing/himanshu.jpeg
+  img: /static/assets/img/landing/jasper.jpeg
   desc: "Toy Project - History of AI Alexa Skill"
-
 
