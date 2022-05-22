@@ -2,7 +2,7 @@
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
 
-- name:  - Crypto Star Dapp
+- name: Crypto Star Dapp
 #  i18n:
   url: https://github.com/hbahuguna/CryptoStarDapp
   gh_user: hbahuguna
@@ -12,7 +12,7 @@
     Create an Ethereum ERC-721 token and transfer it to another wallet.
 
 
-- name:  - Code Coverage with Jacoco
+- name: Code Coverage with Jacoco
 #  i18n:
   url: https://github.com/hbahuguna/jacoco-integration-test-code-coverage
   gh_user: hbahuguna
@@ -22,7 +22,7 @@
     Code Coverage Report for Java based automation tests.
 
 
-- name:  - Skribble Bot
+- name: Skribble Bot
 #  i18n:
   url: https://github.com/hbahuguna/skribblle-bot
   gh_user: hbahuguna
