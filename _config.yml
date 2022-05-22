@@ -16,6 +16,7 @@ author:  # change following line to your infomation.
   name: Himanshu Bahuguna  # Be used at blog posts' author.
   first_name: Himanshu  # Be used at index page about me section.
   last_name: Bahuguna  # Be used at index page about me section.
+  avatar: /static/assets/img/landing/himanshu.jpeg
   github_username: hbahuguna  # Leave blank if you don't have now
   linkedin_id: himanshu-bahuguna-79a988184 # Leave blank if you don't have now
   facebook_username: himanshu.bahuguna  # Leave blank if you don't have now
@@ -28,7 +29,8 @@ author:  # change following line to your infomation.
   skill_icon2:
     - name: fa-linux
     - name: icon-apache
-  desc: - FrontEnd and Backend SDET Manager connecting dots between various Automation Frameworks.  # Describe yourself.
+  desc:
+    - FrontEnd and Backend SDET Manager connecting dots between various Automation Frameworks.  # Describe yourself.
 
 # comment
 #disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
