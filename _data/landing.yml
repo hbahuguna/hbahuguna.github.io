@@ -27,6 +27,7 @@
 - id: blog
   i18n: nav.blog
   name: Blog
+  tpl: 'https://medium.com/@hbahuguna'
 
 - id: links
   i18n: nav.link
