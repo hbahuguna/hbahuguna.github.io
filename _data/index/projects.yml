@@ -27,7 +27,7 @@
   url: https://github.com/hbahuguna/skribblle-bot
   gh_user: hbahuguna
   repo: skribblle-bot
-  img: /static/assets/img/landing/python.png
+  img: /static/assets/img/landing/kingfisher.jpg
   desc: >
     Simple bot to fill words used in past Skribble games in the chat window
 
@@ -48,6 +48,14 @@
   img: /static/assets/img/landing/speech.jpeg
   desc: A deep neural network that functions as part of an end-to-end automatic speech recognition (ASR) pipeline. Pipeline accepts raw audio as input and returns a predicted transcription of the spoken language. 
 
+- name: Alexa History Skill
+#  i18n:
+  url: https://github.com/hbahuguna/AlexaAIHistorySkill
+  gh_user: hbahuguna
+  repo: alexa-history-skill
+  img: /static/assets/img/landing/jasper.jpeg
+  desc: "Toy Project - History of AI Alexa Skill"
+
 - name: Pregnancy Tips and Tools
 #  i18n:
   url: https://github.com/hbahuguna/Capstone-Project
@@ -65,12 +73,4 @@
   img: /static/assets/img/landing/pop-mov.jpeg
   desc: >
     Popular Movies Android App using the Movie DB API
-
-- name: Alexa History Skill
-#  i18n:
-  url: https://github.com/hbahuguna/AlexaAIHistorySkill
-  gh_user: hbahuguna
-  repo: alexa-history-skill
-  img: /static/assets/img/landing/jasper.jpeg
-  desc: "Toy Project - History of AI Alexa Skill"
 
