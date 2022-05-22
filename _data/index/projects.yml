@@ -63,7 +63,8 @@
   repo: Capstone-Project
   img: /static/assets/img/landing/android.gif
   desc: >
-    Android App to notify pregnant women about milestones and provide suggestions based on baby's due date.
+    Android App to notify pregnant women about milestones 
+    And provide suggestions based on baby's due date.
 
 - name: HTML Diff Comparison
 #  i18n:
@@ -72,7 +73,8 @@
   repo: diff2HtmlCompare
   img: /static/assets/img/landing/python.png
   desc: >
-    A python script that takes a number of urls to compare the differences between html sources (side-by-side) in an HTML format.
+    A python script that takes a number of urls to compare the differences
+    between html sources (side-by-side) in an HTML format.
 
 - name: Popular Movies
 #  i18n:
