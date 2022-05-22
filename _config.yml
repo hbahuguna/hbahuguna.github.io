@@ -5,7 +5,7 @@ title: Automation Frameworks and Tools
 description: Connecting dots between various Automation Frameworks
 keywords: SDET, Jalpc, blog, Jekyll, github, gh-pages
 
-# option 1 - publish to http://127.0.0.1:4000/ or https://atlas7.github.io
+# option 1 - publish to http://127.0.0.1:4000/ or https://hbahuguna.github.io
 #baseurl: /   #comment this out entirely. (otherwise CSS issue)
 url: https://hbahuguna.github.io  # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage
 img_path: /static/assets/img/blog  # /homepage/static/assets/img/blog
@@ -16,7 +16,6 @@ author:  # change following line to your infomation.
   name: Himanshu Bahuguna  # Be used at blog posts' author.
   first_name: Himanshu  # Be used at index page about me section.
   last_name: Bahuguna  # Be used at index page about me section.
-  #avatar: /static/assets/img/landing/himanshu.jpeg  # upload your avatar at directory and edit it.
   github_username: hbahuguna  # Leave blank if you don't have now
   linkedin_id: himanshu-bahuguna-79a988184 # Leave blank if you don't have now
   facebook_username: himanshu.bahuguna  # Leave blank if you don't have now
