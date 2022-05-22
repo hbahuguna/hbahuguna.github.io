@@ -56,6 +56,7 @@
   img: /static/assets/img/landing/android.gif
   desc: >
     Android App to notify pregnant women about milestones and provide suggestions based on baby's due date.
+
 - name: Popular Movies
 #  i18n:
   url: https://github.com/hbahuguna/popularmoviesHB
@@ -65,13 +66,12 @@
   desc: >
     Popular Movies Android App using the Movie DB API
 
-
 - name: Alexa History Skill
 #  i18n:
   url: https://github.com/hbahuguna/AlexaAIHistorySkill
   gh_user: hbahuguna
   repo: alexa-history-skill
-  img: /static/assets/img/landing/alexa_uk_towns_icon.png
+  img: /static/assets/img/landing/himanshu.jpeg
   desc: "Toy Project - History of AI Alexa Skill"
 
 
