@@ -65,6 +65,15 @@
   desc: >
     Android App to notify pregnant women about milestones and provide suggestions based on baby's due date.
 
+- name: HTML Diff Comparison
+#  i18n:
+  url: https://github.com/hbahuguna/diff2HtmlCompare
+  gh_user: hbahuguna
+  repo: diff2HtmlCompare
+  img: /static/assets/img/landing/python.png
+  desc: >
+    A python script that takes a number of urls to compare the differences between html sources (side-by-side) in an HTML format.
+
 - name: Popular Movies
 #  i18n:
   url: https://github.com/hbahuguna/popularmoviesHB
