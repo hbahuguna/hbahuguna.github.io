@@ -1,16 +1,31 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
-    detail: Dotdash Meredith
+    detail: Cohesity 
     i18n: company_a
   desc:
-    detail: Managing and Leading Front End and Backend Automation teams.
+    detail: Buildgin Automation Framework for Backup and Recovery SW.
     i18n: company_a_desc
   date:
-    detail: April 2020
+    detail: November 2022
     i18n: company_a_date
   job:
-    detail: Senior Manager SDET
+    detail: Staff SET
+    i18n: company_a_job
+  icon: fa-plus-square
+  present: true
+
+- name:
+    detail: Outco
+    i18n: company_a
+  desc:
+    detail: Helping Clients Ace Technical Interviews.
+    i18n: company_a_desc
+  date:
+    detail: December 2022
+    i18n: company_a_date
+  job:
+    detail: Technical Coach / Part Time
     i18n: company_a_job
   icon: fa-plus-square
   present: true
@@ -29,6 +44,20 @@
     i18n: company_a_job
   icon: fa-plus-square
   present: true
+
+- name:
+    detail: Dotdash Meredith
+    i18n: company_a
+  desc:
+    detail: Managing and Leading Front End and Backend Automation teams.
+    i18n: company_a_desc
+  date:
+    detail: April 2020
+    i18n: company_a_date
+  job:
+    detail: Senior Manager SDET
+    i18n: company_a_job
+  icon: fa-plus-square
 
 - name:
     detail: Dotdash
